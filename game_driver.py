@@ -31,11 +31,6 @@ class ColorGameDriver:
         return chosen_color
 
     def print_board(self):
-        my_str = f"{Back.BLUE} {Back.RED} {Style.RESET_ALL} guys. {Fore.RED} I should be red."
-        print(my_str)
-        colors = [Back.BLUE, Back.RED]
-        colors_str = " ".join([str(c) for c in colors]) + f' {Style.RESET_ALL}'
-        print(colors_str)
         for raw in self.game_board.cells:
             cells_colored_raw = ' '.join([str(cell) for cell in raw]) + f' {Style.RESET_ALL}'
             print(cells_colored_raw)

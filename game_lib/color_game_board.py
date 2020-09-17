@@ -18,9 +18,9 @@ class ColorGameBoard:
 
     def win(self) -> bool:
         base_color = self._get_entry_cell().color
-        for raw in range(len(self.cells)):
-            for col in range(len(self.cells[raw])):
-                if base_color != self.cells[raw][col].color:
+        for raw in self.cells:
+            for cell in raw:
+                if base_color != cell.color:
                     return False
         return True
 
